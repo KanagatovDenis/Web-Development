@@ -1,0 +1,30 @@
+body {
+  margin: auto;
+  background-color: #1e1e1e;
+  display: flex;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.button {
+  width: 100px;
+  height: 100px;
+  border: none;
+  border-radius: 10px;
+  font-size: 60px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.button:hover {
+  box-shadow: 0 0 10px #008F8C;
+}
