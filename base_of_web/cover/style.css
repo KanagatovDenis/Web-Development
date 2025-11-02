@@ -1,0 +1,53 @@
+
+h1 {
+  color: white; 
+  font-size: 50px; 
+  text-transform: uppercase; 
+  font-style: italic;
+  font-family: William, serif;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 45px;
+  font-weight: normal;
+}
+
+h2 {
+  font-family: Inter, sans-serif;
+  color: white; 
+  font-size: 30px; 
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 35px;
+}
+
+h3 {
+  font-family: 'Inter', sans-serif;
+  margin: 0px;
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 18px;
+  font-weight: normal;
+  color: white;
+}
+
+p {
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+img {
+  width: 350px;
+  margin-bottom: 80px;
+}
+
+div {
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  width: 750px;
+  height: 750px;
+  text-align: center;
+  margin: 0 auto 20px;
+
+}
