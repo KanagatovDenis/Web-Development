@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p {
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+
+body {
+  min-width: 850px;;
+  font-family: 'Open Sans', 'Arial', sans-serif;;
+}
+
+header {
+  height: 100vh;
+  background-color: #eee;
+  background-image: url(https://code.s3.yandex.net/web-code/images/freetrack/03/cover.png);
+  background-size: cover;
+  text-align: center;
+  background-position: center;
+}
+
+h1 {
+  color: rgb(255 255 255);
+  font-size: 74px;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin: auto;
+}
+
+
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(95 13 238 / 0.5);
+  display: flex;
+}
+
+.content {
+  width: 770px;
+  font-size: 0px;
+  margin: 0px auto 0px auto;
+}
+
+.card {
+  width: 360px;
+  margin-bottom: 50px;
+  padding: 25px 25px 30 px 25px;
+  border: 1px solid black;
+  display: inline-block;
+  margin-right: 50px;
+  box-shadow: 4px 4px 0px black;
+}
+
+.no-right-margin {
+  margin-right: 0px;
+}
+
+.card-title {
+  font-size: 31px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 18px;
+}
+
+.card-image {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid black;
+}
+
+.footer {
+  height: 200px;
+  background-color: #5f0dee;
+  display: flex;
+}
+
+.footer-author {
+  color: white;
+  font-size: 25px;
+  font-weight: 800;
+  text-align: center;
+  margin: auto;
+}
