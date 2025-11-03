@@ -1,0 +1,66 @@
+@keyframes change-bg {
+
+  0% {
+    background-color: tomato;
+  }
+
+  50% {
+    background-color: orange;
+  }
+
+  100% {
+    background-color: purple;
+  }
+}
+
+.win {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  border-radius: 40px;
+  padding: 20px;
+  font-size: 20px;
+  background-color: #fff;
+  transform: translateX(-50%);
+}
+
+.cell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to right bottom, yellow 50%, blue 50% 100%);
+}
+
+.cell.opened::before {
+  content: none;
+}
+
+.cell.disabled::before {
+  content: none;
+}
+
+.cell.disabled {
+  pointer-events: none;
+}
+
+.cell.disabled:hover {
+  transform: none;
+  cursor: default;
+}
+
+.again {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  border: none;
+  padding: 12px 20px;
+  font-size: 20px;
+  background-color: #fff;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.again:hover {
+  color: #fff;
+  background-color: #000;
+}
