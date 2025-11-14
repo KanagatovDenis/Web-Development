@@ -1,0 +1,9 @@
+@keyframes shake {
+  from {
+    transform: translateX(4px);
+  }
+
+  to {
+    transform: translateX(-4px);
+  }
+}
