@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-block-size: 100dvb;
+  margin: 0;
+  padding: 2em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  background-color: #fff;
+  background-image: url(https://code.s3.yandex.net/web-code/images/dotted.svg);
+}
+
+@keyframes vibe {
+  from {
+    text-shadow:
+      0 0 0 #feafe8,
+      0 0 0 #ffc802,
+      0 0 0 #80d994,
+      0 0 0 #fd24af,
+      0 0 0 #6dc1fd,
+      0 0 0 tomato,
+      0 0 0 #5f0dee,
+      0 0 0 orchid;
+  }
+
+  to {
+    text-shadow:
+      0 4px 0 #feafe8,
+      0 6px 0 #ffc802,
+      -4px 0 0 #80d994,
+      -6px 0 0 #fd24af,
+      0 -4px 0 #6dc1fd,
+      0 -6px 0 tomato,
+      4px 0 0 #5f0dee,
+      6px 0 0 orchid;
+  }
+}
+
+@keyframes round {
+  0% {
+    box-shadow: -8px -8px 0 #fd24af;
+  }
+
+  25% {
+    box-shadow: 8px -8px 0 #5f0dee;
+  }
+
+  50% {
+    box-shadow: 8px 8px 0 #80d994;
+  }
+
+  75% {
+    box-shadow: -8px 8px 0 #5f0dee;
+  }
+
+  100% {
+    box-shadow: -8px -8px 0 #fd24af;
+  }
+}
+
+span {
+  display: grid;
+  place-items: center;
+  inline-size: fit-content;
+  border: 4px solid #ffc802;
+  border-radius: 50%;
+  padding: 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 100px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  background-color: #fff;
+  animation:
+    vibe 1s ease-in-out infinite alternate,
+    round 1s linear infinite;
+  aspect-ratio: 1 / 1;
+}
+
+@media (prefers-reduce-motion: reduce) {
+  span {
+    animation: none;
+  }
+}
