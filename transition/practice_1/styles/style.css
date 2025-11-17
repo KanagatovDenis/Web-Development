@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  text-size-adjust: 100%;
+  background-color: #ffc802;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.members {
+  display: flex;
+  justify-content: space-between;
+  max-inline-size: 500px;
+  block-size: 100dvb;
+  margin: 0 auto;
+  padding-inline-start: 0;
+  list-style-type: none;
+}
+
+.members::before {
+  content: '← Наведи курсор →';
+  position: absolute;
+  font-size: 30px;
+  transform: translate(-50%, -50%);
+  inset-inline-start: 50%;
+  inset-block-start: 50%;
+}
+
+.members__member {
+  position: relative;
+  inline-size: 40px;
+}
+
+.members__member::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  box-sizing: border-box;
+  inline-size: inherit;
+  block-size: 100dvb;
+  border-inline-start: 1px solid #000;
+  border-inline-end: 1px solid #000;
+  background-color: #d9d9d9;
+  background-image:
+    repeating-linear-gradient(
+      -15deg,
+      #000,
+      #000 1px,
+      transparent 1px,
+      transparent 25px
+    );
+}
+
+.yo {
+  position: absolute;
+  transition-delay: 1s;
+  transition-duration: 5s;
+  transition-property: inset-block-end;
+  inset-inline-start: 50%;
+  inset-block-end: 0;
+}
+
+.members:hover .yo {
+  inset-block-end: calc(100% - 200px);
+}
+
+.yo_type_green {
+  transform: translateX(-70%);
+}
+
+.yo_type_pink {
+  transform: translateX(-30%);
+}
