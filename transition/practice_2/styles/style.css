@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.scene {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100dvb;
+  overflow: hidden;
+  background-image: url(../images/sky.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  isolation: isolate;
+}
+
+.scene__image {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+}
+
+.scene__image_type_first-plan {
+  inset: 0;
+  background-image: url(../images/earth.png);
+  transition: transform 0.7s ease-out;
+}
+
+.scene__image_type_second-plan {
+  inset: -20px;
+  z-index: -1;
+  background-image: url(../images/mountains.png);
+  transition: transform 0.7s ease-out;
+}
+
+.scene__image_type_moon {
+  z-index: -2;
+  align-self: center;
+  inline-size: 130px;
+  border-radius: 50%;
+  box-shadow: 0 0 130px 0 #fff;
+  background-image: url(../images/moon.png);
+  animation: moon 25s linear infinite;
+  inset-block-start: 8%;
+  aspect-ratio: 1 / 1;
+}
+
+.content__header {
+  position: absolute;
+  z-index: 10;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  inset-inline-start: 50%;
+  inset-block-start: 50%;
+}
+
+.content__button {
+  border: none;
+  padding: 25px 85px;
+  color: #000;
+  font-weight: 800;
+  font-size: clamp(18px, 2.2vw, 36px);
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.content__button:focus {
+  outline: none;
+}
+
+.content__button:is(:hover, :focus-visible) {
+  color: #fff;
+  transition-delay: 0.3s;
+  transition-property: border-color;
+}
+
+.content__button::before,
+.content__button::after {
+  transform: skewX(30deg);
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inline-size: calc(50% + 1px);
+  block-size: 100%;
+  background-color: #fff;
+  transition-duration: 0.7s;
+  transition-property: inset-block-start, inset-inline-start, transform;
+}
+
+.content__button::before {
+  inset-block-start: -5px;
+  inset-inline-start: 0;
+}
+
+.content__button::after {
+  inset-block-start: 5px;
+  inset-inline-start: 50%;
+}
+
+.content__button:is(:hover, :focus-visible)::before {
+  background-color: #000;
+  inset-inline-start: 50%;
+  inset-block-start: 0;
+}
+
+.content__button:is(:hover, :focus-visible)::after {
+  background-color: #000;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+}
+
+@keyframes moon {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.content:has(.content__button:is(:hover, :focus-visible)) :is(.scene__image_type_first-plan) {
+  transform: scale(1.05);
+}
+
+.content:has(.content__button:is(:hover, :focus-visible)) :is(.scene__image_type_second-plan) {
+  transform: scale(0.95);
+}
