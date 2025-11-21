@@ -1,0 +1,160 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-block-size: 100dvb;
+  margin: 0;
+  background-color: #ffc802;
+}
+
+.watch__wristlet {
+  position: relative;
+  z-index: -1;
+  inline-size: 80%;
+  block-size: 89px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  background-color: #000;
+}
+
+.watch__wristlet::before,
+.watch__wristlet::after {
+  content: '';
+  position: absolute;
+  inline-size: 30px;
+  block-size: 100px;
+  background-color: #ffc802;
+}
+
+.watch__wristlet_position_upper {
+  margin-block-end: -5px;
+  border-top-left-radius: 45%;
+  border-top-right-radius: 45%;
+}
+
+.watch__wristlet_position_upper::before {
+  border-end-end-radius: 30px;
+  inset-inline-start: -15px;
+  inset-block-end: -4px;
+}
+
+.watch__wristlet_position_upper::after {
+  border-end-start-radius: 30px;
+  inset-inline-end: -15px;
+  inset-block-end: -4px;
+}
+
+.watch__wristlet_position_lower {
+  margin-block-start: -5px;
+  border-bottom-right-radius: 45%;
+  border-bottom-left-radius: 45%;
+}
+
+.watch__wristlet_position_lower::before {
+  border-start-end-radius: 30px;
+  inset-inline-start: -15px;
+  inset-block-end: -7px;
+}
+
+.watch__wristlet_position_lower::after {
+  border-start-start-radius: 30px;
+  inset-inline-end: -15px;
+  inset-block-end: -7px;
+}
+
+.watch__body {
+  position: relative;
+  box-sizing: border-box;
+  inline-size: 221px;
+  block-size: 265px;
+  border: 1px solid #000;
+  border-radius: 42px;
+  padding: 10px 8px;
+  background-color: #ffc802;
+}
+
+.watch__body::before,
+.watch__body::after {
+  content: '';
+  position: absolute;
+  inline-size: 9px;
+  border-start-end-radius: 5px;
+  border-end-end-radius: 5px;
+  background-color: #000;
+  inset-inline-end: 0;
+  translate: 100%;
+}
+
+.watch__body::before {
+  block-size: 40px;
+  inset-block-start: 21%;
+}
+
+.watch__body::after {
+  block-size: 54px;
+  inset-block-end: 27%;
+}
+
+.watch__dial {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.dial {
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  border-radius: 34px;
+  background-color: #fff;
+  background-image: url(../images/dial.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 92%;
+}
+
+.dial::before {
+  content: '';
+  position: absolute;
+  inset: 50%;
+  z-index: 1;
+  inline-size: 10px;
+  border-radius: 50%;
+  background-color: #000;
+  translate: -50% -50%;
+  aspect-ratio: 1 / 1;
+}
+
+.dial__hand {
+  position: absolute;
+  transform-origin: bottom;
+  inset-inline-start: 50%;
+  inset-block-start: 50%;
+  translate: -50% -100%;
+}
+
+.dial__hand_type_hour {
+  inline-size: 4px;
+  block-size: 25%;
+  background-color: #000;
+  animation: time 60s infinite linear;
+}
+
+.dial__hand_type_minute {
+  inline-size: 3px;
+  block-size: 28%;
+  background-color: #000;
+  animation: time 30s infinite linear;
+}
+
+.dial__hand_type_second {
+  inline-size: 2px;
+  block-size: 31%;
+  background-color: #f00;
+  animation: time 15s infinite linear;
+}
+
+@keyframes time {
+  to {
+    transform: rotate(1turn);
+  }
+}
