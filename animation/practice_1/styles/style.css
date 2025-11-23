@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  block-size: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  block-size: 100%;
+}
+
+.loader {
+  border: 10px solid #feafe8;
+  border-radius: 50%;
+  border-block-end-color: #fd24af;
+  animation: loading reverse infinite linear 1.5s;
+  inline-size: 100px;
+  aspect-ratio: 1/1;
+}
+
+@keyframes loading {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}
