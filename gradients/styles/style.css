@@ -1,0 +1,101 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  inline-size: 100dvi;
+  block-size: 100dvb;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+.sun {
+  position: absolute;
+  z-index: 2;
+  inline-size: 100%;
+  block-size: 50%;
+  opacity: 0.5;
+  background-image:
+    radial-gradient(circle at bottom, rgb(254 255 255 / 0.8) 5%, rgb(236 255 0) 10%, rgb(253 50 41) 25%, rgb(243 0 0) 40%, rgb(93 0 0) 100%),
+    radial-gradient(circle at bottom, rgb(242 248 247) 0%, rgb(249 249 28) 3%, rgb(247 214 46) 8%, rgb(248 200 95) 12%, rgb(201 165 132) 30%, rgb(115 130 133) 50%, rgb(46 97 122) 85%, rgb(24 75 106) 100%);
+  background-repeat: no-repeat;
+  inset-block-start: 0;
+  inset-inline-end: 0%;
+}
+
+.sky {
+  position: absolute;
+  z-index: 1;
+  inline-size: 100%;
+  block-size: 50%;
+  opacity: 0.52;
+  background-image: linear-gradient(to top, rgb(249 251 240) 10%, rgb(215 253 254) 20%, rgb(167 222 253) 40%, rgb(110 175 255) 100%);
+  inset-block-start: 0;
+  inset-inline-end: 0;
+}
+
+.horizon {
+  position: absolute;
+  z-index: 1;
+  inline-size: 100%;
+  block-size: 50%;
+  opacity: 0.99;
+  background-image: linear-gradient(to top, rgb(212 87 43 / 0.9) 0%, rgb(246 149 52 / 0.8) 20%, rgb(24 75 106 / 0) 100%);
+  background-repeat: no-repeat;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+}
+
+.water {
+  position: absolute;
+  z-index: 2;
+  inline-size: 100%;
+  block-size: 50%;
+  overflow: hidden;
+  background-image: linear-gradient(to top, rgb(0 25 45) 0%, rgb(14 71 117) 35%, rgb(26 126 174) 70%, rgb(62 168 220) 100%);
+  background-repeat: no-repeat;
+  inset-block-end: 0;
+  inset-inline-end: 0;
+}
+
+.water-distance {
+  position: absolute;
+  z-index: 2;
+  inline-size: 100%;
+  block-size: 50%;
+  background-image: linear-gradient(to top, rgb(0 0 0 / 0) 10%, rgb(0 0 0 / 0.2) 44%, rgb(0 0 0 / 0.65) 95%, rgb(0 0 0 / 0.62) 100%);
+  background-repeat: no-repeat;
+  inset-block-end: 0;
+  inset-inline-end: 0;
+}
+
+.water-reflection-container {
+  position: absolute;
+  z-index: 2;
+  inline-size: 103%;
+  block-size: 50%;
+  overflow: hidden;
+  perspective: 30px;
+  perspective-origin: 50% -12%;
+  inset-block-start: 50%;
+  inset-inline-end: -3%;
+}
+
+.water-reflection-middle {
+  position: absolute;
+  z-index: 2;
+  inline-size: 200%;
+  block-size: 55%;
+  opacity: 0.7;
+  background-repeat: no-repeat;
+  transform: rotateX(45deg);
+  inset-block-start: 0;
+  inset-inline-end: -50%;
+  background-image: radial-gradient(at 50% 0, rgb(247 177 72) 3%, rgb(248 175 65) 6%,
+                                    rgb(207 62 30 / 0.4) 35%, rgb(176 91 48 / 0.1) 45%,
+                                    rgb(141 88 47 / 0) 60%, rgb(141 88 47 / 0) 100%);
+}
