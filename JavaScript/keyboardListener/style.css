@@ -1,0 +1,32 @@
+:root {
+  font-family: "Open Sans", sans-serif;
+  background-color: #fff;
+  font-synthesis: none;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+}
+
+.page {
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://code.s3.yandex.net/web-code/images/dotted.svg);
+  margin: 0;
+}
+
+.page__header {
+  font-weight: 800;
+  font-size: 45px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #000;
+  padding: 25px;
+}
+
+.page__keyboard-shortcut_color_accent {
+  color: #ffc802;
+}
