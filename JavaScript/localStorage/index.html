@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='./style.css'>
+  <title>Set yourself a goal!</title>
+</head>
+<body class='page'>
+  <div class='create-goal page__goal'>
+    <h1 class="create-goal__title">Создайте цель на год</h1>
+    <form class='form create-goal__form'>
+      <textarea class='form__textarea' placeholder='Введите название цели'></textarea>
+      <button type="submit" class='form__button'>Создать цель</button>
+    </form>
+  </div>
+  <div class="goal page__goal page__goal_display_none">
+    <h2 class="goal__title">Готово!</h2>
+    <p class="goal__text">
+      Вы создали цель
+      <span class="goal__text goal__text_goal-name"></span>
+    </p>
+    <p class="goal__text">
+      она должна быть выполнена
+      <span class="goal__text goal__text_goal-end-date"></span>
+    </p>
+  </div>
+
+  <script src='./index.js'></script>
+</body>
+</html>
