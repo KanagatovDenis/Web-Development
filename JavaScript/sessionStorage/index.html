@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='./style.css'>
+  <title>Change background color</title>
+</head>
+<body class='page'>
+  <section class='image-creation'>
+    <form class='form image-creation__form'>
+      <h2 class='form__title'>Введите параметры картинки</h2>
+      <input type='text' class='form__input form__input_link' placeholder='Ссылка на картинку'>
+      <input type='text' class='form__input form__input_text' placeholder='Подпись для картинки'>
+      <label class='form__label'>
+        Выберите цвет подписи
+        <input class='form__input-color' type='color'>
+      </label>
+      <button type="submit" class='form__button'>Сохранить</button>
+    </form>
+    <div class='image'>
+      <img src="" alt="Здесь будет изображение..." class='image__background'>
+      <p class='image__text'></p>
+    </div>
+  </section>
+
+  <script src='./index.js'></script>
+</body>
+</html>
